@@ -26,9 +26,14 @@ return (a - 1)
 }
 
 function makeInt(n) { 
-parseInt(n, 10)
-}
-
+  var parsed = parseInt(n,10); 
+  if (isNaN(parsed)) { 
+  return true; } 
+  return parsed; 
+} 
+  
 function preserveDecimal(n) { 
-parseInt(2.222)
+if (isNaN(n)) { 
+return true; } 
+return parseFloat(n); 
 }
